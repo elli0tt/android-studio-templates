@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<template
+    format="5"
+    revision="1"
+    name="Custom List Adapter"
+    description="Creates a ListAdapter with ViewHolder and list_item.xml file"
+    minApi="14"
+    minBuildApi="14">
+
+    <category value="Custom" />
+    <formfactor value="Mobile" />
+
+    <parameter
+        id="packageName"
+        name="Package name"
+        type="string"
+        constraints="package"
+        default="com.mycompany.myapp" />
+
+    <parameter
+        id="adapterClass"
+        name="Adapter name"
+        type="string"
+        constraints="class|nonempty|unique"
+        default="Adapter"
+        help="The name of the List Adapter to create" />
+
+    <parameter
+        id="viewHolderClass"
+        name="ViewHolder name"
+        type="string"
+        constraints="class|nonempty|unique"
+        default="ViewHolder"
+        help="The name of the ViewHolder to create" />
+
+    <parameter
+        id="layoutName"
+        name="List item Layout name"
+        type="string"
+        constraints="layout|nonempty|unique"
+        default="list_item"
+        help="The name of the layout to create" />
+
+    <parameter
+        id="dataClass"
+        name="Data model name"
+        type="string"
+        constraints="class|nonempty|unique"
+        default="Model"
+        help="Then name of the Recycler item model class to create"/>
+
+    <thumbs>
+        <thumb>template_blank_fragment.png</thumb>
+    </thumbs>
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
