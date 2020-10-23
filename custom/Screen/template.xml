@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<template
+    format="5"
+    revision="1"
+    name="Screen"
+    description="Creates a Fragment with layout.xml file, di: Component, Module, Scope"
+    minApi="14"
+    minBuildApi="14">
+
+    <category value="Custom" />
+    <formfactor value="Mobile" />
+
+    <parameter
+        id="packageName"
+        name="Package name"
+        type="string"
+        constraints="package"
+        default="com.mycompany.myapp" />
+
+    <parameter
+        id="fragmentClass"
+        name="Fragment name"
+        type="string"
+        constraints="class|nonempty|unique"
+        default="Fragment"
+        help="The name of the Fragment to create" />
+
+    <parameter
+        id="layoutName"
+        name="List item Layout name"
+        type="string"
+        constraints="layout|nonempty|unique"
+        default="list_item"
+        suggest="${fragmentToLayout(fragmentClass)}"
+        help="The name of the layout to create" />
+
+    <parameter
+        id="screenName"
+        name="Screen name"
+        type="string"
+        constraints="class|nonempty|unique"
+        default=""
+        help="The name of the screen to create" />
+
+    <thumbs>
+        <thumb>template_blank_fragment.png</thumb>
+    </thumbs>
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
