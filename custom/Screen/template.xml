@@ -18,23 +18,6 @@
         default="com.mycompany.myapp" />
 
     <parameter
-        id="fragmentClass"
-        name="Fragment name"
-        type="string"
-        constraints="class|nonempty|unique"
-        default="Fragment"
-        help="The name of the Fragment to create" />
-
-    <parameter
-        id="layoutName"
-        name="List item Layout name"
-        type="string"
-        constraints="layout|nonempty|unique"
-        default="list_item"
-        suggest="${fragmentToLayout(fragmentClass)}"
-        help="The name of the layout to create" />
-
-    <parameter
         id="screenName"
         name="Screen name"
         type="string"
