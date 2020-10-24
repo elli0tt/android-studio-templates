@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<template
+    format="5"
+    revision="1"
+    name="List&read screen"
+    description="Creates a Fragment with layout.xml file, di: Component, Module, Scope"
+    minApi="14"
+    minBuildApi="14">
+
+    <category value="Custom" />
+    <formfactor value="Mobile" />
+
+    <parameter
+        id="packageName"
+        name="Package name"
+        type="string"
+        constraints="package"
+        default="com.mycompany.myapp" />
+
+    <parameter
+        id="screenName"
+        name="Screen name"
+        type="string"
+        constraints="class|nonempty|unique"
+        default=""
+        help="The name of the screen to create" />
+
+    <thumbs>
+        <thumb>template_blank_fragment.png</thumb>
+    </thumbs>
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
