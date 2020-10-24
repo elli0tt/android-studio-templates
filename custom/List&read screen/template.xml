@@ -2,7 +2,7 @@
 <template
     format="5"
     revision="1"
-    name="List&read screen"
+    name="Listen-read screen"
     description="Creates a Fragment with layout.xml file, di: Component, Module, Scope"
     minApi="14"
     minBuildApi="14">
