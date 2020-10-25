@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.ListAdapter
 import ${applicationPackage}.R
 </#if>
 
-class ${adapterClass}: ListAdapter<${dataClass}, CustomViewHolder>(DIFF_CALLBACK) {
+class ${adapterClass}: ListAdapter<${dataClass}, ${viewHolderClass}>(DIFF_CALLBACK) {
 
     companion object {
         val DIFF_CALLBACK = object : DiffUtil.ItemCallback<${dataClass}>() {
